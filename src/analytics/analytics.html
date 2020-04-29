@@ -5,17 +5,14 @@
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta charset="utf-8">
-    <link rel="stylesheet" href="<%= htmlWebpackPlugin.files.chunks.index.css %>">
+    <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.chunks.analytics.css %>">
     <title>NewsAnalyzer</title>
 </head>
 <body>
-    <div class="header"></div>
-    <h1>Main page</h1>
-    <a href="./src/about/about.html">about</a>
-    <a href="./src/analytics/analytics.html">analytic</a>
-
-
-
-    <script src="<%= htmlWebpackPlugin.files.chunks.index.entry %>"></script>
+    <div class="header">
+        <h1>analytics</h1>
+    </div>
+    <script src="<%= htmlWebpackPlugin.files.chunks.analytics.entry %>"></script>
 </body>
 </html>
+
