@@ -1,0 +1,8 @@
+.search__input-container {
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+    margin-top: 64px;
+    width: 608px;
+    height: 64px;
+}

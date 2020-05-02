@@ -1,0 +1,19 @@
+.header__links-current-item {
+    font-family: Roboto, serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #FFFFFF;
+}
+.header__links-current-item:before {
+    position: absolute;
+    content: '';
+    top: 78px;
+    width: 68px;
+    height: 3px;
+    background-color: #fff;
+}

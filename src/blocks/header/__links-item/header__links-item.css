@@ -1,0 +1,15 @@
+.header__links-item {
+    font-family: Roboto, serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #B6BCBF;
+    margin-right: 34px;
+}
+.header__links-item:last-of-type {
+    margin-right: 0;
+}
