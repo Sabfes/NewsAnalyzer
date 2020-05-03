@@ -4,7 +4,9 @@
 @import url(blocks/about/about.css);
 @import url(blocks/footer/footer.css);
 @import url(blocks/search/search.css);
-
+@import url(blocks/preloader/preloader.css);
+@import url(blocks/search-err/search-err.css);
+@import url(blocks/result/result.css);
 .root {
     background-color: #E5E5E5;
 }
