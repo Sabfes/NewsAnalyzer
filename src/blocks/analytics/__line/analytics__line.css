@@ -1,0 +1,12 @@
+.analytics__line {
+    width: 100%;
+    height: 1px;
+    background: black;
+    margin-top: 24px;
+    margin-bottom: 0;
+}
+@media screen and (max-width: 320px) {
+    .analytics__line {
+        margin-top: 8px;
+    }
+}

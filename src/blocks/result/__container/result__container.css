@@ -2,6 +2,24 @@
     margin-top: 64px;
     margin-bottom: 0;
     display: grid;
-    grid-template-columns: 400px 400px 400px;
+    grid-template-columns: auto auto auto;
     grid-gap: 16px;
+}
+@media screen and (max-width: 868px) {
+    .result__container {
+        grid-template-columns: auto auto;
+        grid-gap: 8px;
+        margin-top: 32px;
+    }
+}
+@media screen and (max-width: 680px) {
+    .result__container {
+        grid-gap: 12px;
+    }
+}
+@media screen and (max-width: 500px) {
+    .result__container {
+        grid-template-columns: auto;
+        grid-gap: 15px;
+    }
 }

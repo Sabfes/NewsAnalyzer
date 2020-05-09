@@ -8,3 +8,10 @@
     margin-top: 0;
     margin-bottom: 0;
 }
+@media screen and (max-width: 768px) {
+    .search__title {
+        font-size: 36px;
+        line-height: 40px;
+        max-width: 385px;
+    }
+}

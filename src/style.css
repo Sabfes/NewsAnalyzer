@@ -7,6 +7,13 @@
 @import url(blocks/preloader/preloader.css);
 @import url(blocks/search-err/search-err.css);
 @import url(blocks/result/result.css);
+@import url(blocks/description/description.css);
+@import url(blocks/stack-technologies/stack-technologies.css);
+@import url(blocks/commits/commits.css);
+@import url(blocks/swiper/swiper.css);
+@import url(blocks/info/info.css);
+@import url(blocks/analytics/analytics.css);
+
 .root {
     background-color: #E5E5E5;
 }

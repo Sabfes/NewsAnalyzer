@@ -1,3 +1,5 @@
+@import url(_black/header__links-current-item_black.css);
+
 .header__links-current-item {
     font-family: Roboto, serif;
     font-style: normal;
@@ -16,4 +18,15 @@
     width: 68px;
     height: 3px;
     background-color: #fff;
+}
+
+@media screen and (max-width: 768px) {
+    .header__links-current-item:before {
+        top: 62px;
+    }
+}
+@media screen and (max-width: 320px) {
+    .header__links-current-item:before {
+        top: 54px;
+    }
 }

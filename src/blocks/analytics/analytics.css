@@ -1,0 +1,25 @@
+@import url(__line/analytics__line.css);
+@import url(__ruler/analytics__ruler.css);
+@import url(__title/analytics__title.css);
+@import url(__info/analytics__info.css);
+@import url(__quantity/analytics__quantity.css);
+@import url(__container/analytics__container.css);
+@import url(__days/analytics__days.css);
+@import url(__chart/analytics__chart.css);
+@import url(__chart-item/analytics__chart-item.css);
+
+
+.analytics {
+    background: #F5F6F7;
+    padding: 80px calc((100% - (100% - 210px))/2) 80px;
+}
+@media screen and (max-width: 768px){
+    .analytics {
+        padding: 40px calc((100% - (100% - 80px))/2) 40px;
+    }
+}
+@media screen and (max-width: 320px) {
+    .analytics {
+        padding: 24px calc((100% - (100% - 32px)) / 2) 38px;
+    }
+}

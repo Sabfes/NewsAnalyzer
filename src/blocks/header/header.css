@@ -2,6 +2,7 @@
 @import url(__links/header__links.css);
 @import url(__links-item/header__links-item.css);
 @import url(__links-current-item/header__links-current-item.css);
+@import url(_white/header_white.css);
 
 
 .header {
@@ -11,4 +12,17 @@
     height: 80px;
     padding: 0 calc((100% - (100% - 210px))/2);
     box-shadow: inset 0 -1px 0 rgba(255, 255, 255, 0.2);
+}
+
+@media screen and (max-width: 768px) {
+    .header {
+        padding: 0 calc((100% - (100% - 80px))/2);
+        height: 64px;
+    }
+}
+@media screen and (max-width: 320px) {
+    .header {
+        padding: 0 calc((100% - (100% - 32px))/2);
+        height: 56px;
+    }
 }

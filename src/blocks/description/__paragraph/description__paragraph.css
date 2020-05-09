@@ -1,0 +1,15 @@
+.description__paragraph {
+    margin-top: 24px;
+    margin-bottom: 0;
+    font-family: Roboto, serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 24px;
+    max-width: 815px;
+}
+@media screen and (max-width: 678px) {
+    .description__paragraph {
+        margin-top: 16px;
+    }
+}

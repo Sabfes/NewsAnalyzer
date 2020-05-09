@@ -9,3 +9,15 @@
     margin-top: 32px;
     margin-bottom: 0;
 }
+
+@media screen and (max-width: 768px) {
+    .search__subtitle {
+        margin-top: 16px;
+    }
+}
+@media screen and (max-width: 320px) {
+    .search__subtitle {
+        font-size: 20px;
+        line-height: 26px;
+    }
+}
