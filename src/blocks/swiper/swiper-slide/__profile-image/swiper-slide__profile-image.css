@@ -1,0 +1,10 @@
+.swiper-slide__profile-image {
+    width: 64px;
+    height: 64px;
+}
+@media screen and (max-width: 768px) {
+    .swiper-slide__profile-image {
+        height: 48px;
+        width: 48px;
+    }
+}

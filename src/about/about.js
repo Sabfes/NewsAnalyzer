@@ -17,4 +17,3 @@ let swiper = new Swiper('.swiper-container', {
         prevEl: '.swiper-button-prev',
     },
 });
-console.log(document.querySelector('.swiper-button-next'));

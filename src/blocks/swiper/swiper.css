@@ -1,18 +1,19 @@
-.swiper-container {
-    width: 100%;
-    margin-top: 64px;
-    margin-bottom: 80px;
-    background: #F5F6F7;
-    height: 344px !important;
-    position: relative;
-}
+@import url(swiper-slide/swiper-slide.css);
+@import url(swiper-container.css);
+
+/* Кнопка назад */
 .swiper-button-prev {
     width: 40px !important;
     height: 40px !important;
     border-radius: 100px;
     background-color: black;
     color: #fff !important;
+    z-index: 20 !important;
 }
+.swiper-button-prev::after {
+    font-size: initial !important;
+}
+/* Кнопка вперед */
 .swiper-button-next {
     color: #fff !important;
     width: 40px !important;
@@ -23,79 +24,14 @@
 .swiper-button-next::after {
     font-size: initial !important;
 }
-.swiper-button-prev::after {
-    font-size: initial !important;
-}
-
-.swiper-slide {
-    box-sizing: border-box;
-    width: 400px !important;
-    height: 288px !important;
-    background: #fff;
-    border-radius: 16px;
-    padding: 24px;
-}
+/* Меню переключения */
 .swiper-pagination {
     position: static;
 }
 .swiper-pagination-bullet-active {
     background: black !important;
 }
-
-
-
-.swiper-slide__date {
-    font-family: Roboto, serif;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 14px;
-    line-height: 22px;
-    color: #B6BCBF;
-    margin-top: 0;
-    margin-bottom: 0;
-}
-.swiper-slide__profile {
-    display: flex;
-    margin-top: 16px;
-    margin-bottom: 0;
-    justify-content: flex-start;
-    align-items: center;
-}
-.swiper-slide__profile-info {
-    display: flex;
-    flex-direction: column;
-    margin-left: 16px;
-}
-.swiper-slide__profile-name {
-    font-family: Roboto Slab, serif;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 26px;
-    line-height: 30px;
-}
-.swiper-slide__profile-mail {
-    font-family: Roboto, serif;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 14px;
-    line-height: 22px;
-}
-.swiper-slide__text {
-    font-family: Roboto, serif;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 16px;
-    line-height: 22px;
-    margin-top: 16px;
-    margin-bottom: 0;
-    max-width: 352px;
-    max-height: 122px;
-    overflow: hidden;
-}
-.swiper-slide__profile-image {
-    width: 64px;
-    height: 64px;
-}
+/* Кнопка в мобильной версии */
 .swiper-mobile-btn {
     display: none;
     width: 288px;
@@ -107,30 +43,7 @@
     border-radius: 80px;
 }
 
-
-
 @media screen and (max-width: 768px) {
-    .swiper-slide__profile-name {
-        font-size: 20px;
-        line-height: 30px;
-    }
-    .swiper-slide__profile-image {
-        height: 48px;
-        width: 48px;
-    }
-    .swiper-slide__text {
-        max-height: 88px;
-    }
-    .swiper-container {
-        margin-top: 32px;
-        margin-bottom: 40px;
-        height: 282px !important;
-    }
-    .swiper-slide {
-        width: 336px !important;
-        height: 242px !important;
-        margin-right: 8px !important;
-    }
     .swiper-button-prev {
         display: none !important;
     }
@@ -145,23 +58,11 @@
     }
 }
 @media screen and (max-width: 320px){
-    .swiper-slide {
-        width: 288px !important;
-        height: 264px !important;
-        padding: 16px;
-    }
-    .swiper-container {
-        height: 288px;
-        margin-bottom: 0;
-    }
     .swiper-wrapper {
         transform: translate3d(16px, 0px, 0px) !important;
     }
     .swiper-pagination {
         bottom: -2px !important;
-    }
-    .commits__link {
-        display: none;
     }
     .swiper-mobile-btn {
         align-self: center;

@@ -1,0 +1,17 @@
+.swiper-slide__text {
+    font-family: Roboto, serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 22px;
+    margin-top: 16px;
+    margin-bottom: 0;
+    max-width: 352px;
+    max-height: 122px;
+    overflow: hidden;
+}
+@media screen and (max-width: 768px) {
+    .swiper-slide__text {
+        max-height: 88px;
+    }
+}

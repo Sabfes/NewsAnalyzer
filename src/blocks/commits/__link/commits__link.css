@@ -20,5 +20,7 @@
 @media screen and (max-width: 320px) {
     .commits__link {
         margin-top: 16px;
+        display: none;
     }
+
 }

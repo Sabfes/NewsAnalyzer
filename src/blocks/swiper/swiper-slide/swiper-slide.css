@@ -1,0 +1,32 @@
+@import url(__date/swiper-slide__date.css);
+@import url(__profile/swiper-slide__profile.css);
+@import url(__profile-info/swiper-slide__profile-info.css);
+@import url(__profile-name/swiper-slide__profile-name.css);
+@import url(__profile-image/swiper-slide__profile-image.css);
+@import url(__text/swiper-slide__text.css);
+@import url(__profile-mail/swiper-slide__profile-mail.css);
+
+.swiper-slide {
+    cursor: pointer;
+    box-sizing: border-box;
+    width: 400px !important;
+    height: 288px !important;
+    background: #fff;
+    border-radius: 16px;
+    padding: 24px;
+}
+
+@media screen and (max-width: 768px) {
+    .swiper-slide {
+        width: 336px !important;
+        height: 242px !important;
+        margin-right: 8px !important;
+    }
+}
+@media screen and (max-width: 320px) {
+    .swiper-slide {
+        width: 288px !important;
+        height: 264px !important;
+        padding: 16px;
+    }
+}
