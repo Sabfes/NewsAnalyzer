@@ -1,0 +1,12 @@
+.card__content {
+    display: flex;
+    flex-direction: column;
+    padding: 20px 24px 24px;
+    background: #fff;
+    border-radius: 0 0 16px 16px;
+}
+@media screen and (max-width: 768px) {
+    .card__content {
+        padding: 16px;
+    }
+}

@@ -1,0 +1,24 @@
+@import url(__nav/info__nav.css);
+@import url(__link/info__link.css);
+@import url(__link_current/info__link_current.css);
+@import url(__title/info__title.css);
+@import url(__weeks-news_title/info__weeks-news_title.css);
+@import url(__weeks-news/info__weeks-news.css);
+
+.info {
+    padding: 40px calc((100% - (100% - 208px))/2) 80px;
+    background: #fff;
+}
+@media screen and (max-width: 768px) {
+    .info {
+        padding: 32px calc((100% - (100% - 80px))/2) 40px;
+    }
+}
+@media screen and (max-width: 320px) {
+    .info {
+        padding: 16px calc((100% - (100% - 32px))/2) 24px;
+    }
+    .info__nav {
+        display: none;
+    }
+}

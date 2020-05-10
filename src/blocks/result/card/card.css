@@ -1,0 +1,15 @@
+@import url(__img/card__img.css);
+@import url(__content/card__content.css);
+@import url(__date/card__date.css);
+@import url(__site/card__site.css);
+@import url(__text/card__text.css);
+@import url(__title/card__title.css);
+
+.card {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    max-height: 576px;
+    border-radius: 16px;
+}
+

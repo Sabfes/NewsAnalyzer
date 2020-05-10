@@ -1,0 +1,11 @@
+.footer__social {
+    display: flex;
+    list-style: none;
+}
+@media screen and (max-width: 320px) {
+    .footer__social {
+        position: absolute;
+        margin-left: 108px;
+        margin-top: 20px;
+    }
+}

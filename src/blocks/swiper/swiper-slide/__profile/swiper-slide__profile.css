@@ -1,0 +1,7 @@
+.swiper-slide__profile {
+    display: flex;
+    margin-top: 16px;
+    margin-bottom: 0;
+    justify-content: flex-start;
+    align-items: center;
+}

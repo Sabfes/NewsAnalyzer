@@ -1,0 +1,18 @@
+.card__site {
+    margin-top: 18px;
+    margin-bottom: 0;
+    font-family: Roboto Slab, serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 0.4px;
+    text-transform: uppercase;
+    color: #B6BCBF;
+}
+
+@media screen and (max-width: 768px) {
+    .card__site {
+        margin-top: 12px;
+    }
+}

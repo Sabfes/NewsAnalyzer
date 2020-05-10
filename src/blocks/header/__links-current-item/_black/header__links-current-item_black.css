@@ -1,0 +1,7 @@
+.header__links-current-item_black {
+    color: #1A1B22 !important;
+}
+.header__links-current-item_black:before {
+    width: 84px !important;
+    background: #1A1B22 !important;
+}

@@ -1,0 +1,26 @@
+.commits__link {
+    font-family: Roboto, serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #1A1B22;
+}
+
+@media screen and (max-width: 768px) {
+    .commits__link {
+        font-size: 18px;
+        line-height: 24px;
+        align-items: flex-end;
+    }
+}
+@media screen and (max-width: 320px) {
+    .commits__link {
+        margin-top: 16px;
+        display: none;
+    }
+
+}

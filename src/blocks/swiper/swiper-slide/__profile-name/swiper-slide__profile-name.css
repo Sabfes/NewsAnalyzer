@@ -1,0 +1,13 @@
+.swiper-slide__profile-name {
+    font-family: Roboto Slab, serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 26px;
+    line-height: 30px;
+}
+@media screen and (max-width: 768px) {
+    .swiper-slide__profile-name {
+        font-size: 20px;
+        line-height: 30px;
+    }
+}
