@@ -14,7 +14,7 @@ module.exports = {
     },
     output: {
         path: path.resolve(__dirname, 'dist'),
-        filename: '[name].[hash].js',
+        filename: '[name]/[name].[hash].js',
     },
     module: {
         rules: [
@@ -51,7 +51,7 @@ module.exports = {
     },
     plugins: [
         new MiniCssExtractPlugin({ //
-            filename: './[name].[contenthash].css',
+            filename: '[name]/[name].[contenthash].css',
         }),
         new OptimizeCssAssetsPlugin({
             assetNameRegExp: /.css$/,
@@ -64,17 +64,17 @@ module.exports = {
         new HtmlWebpackPlugin({
             inject: false,
             template: './src/index.html',
-            filename: 'index.html'
+            filename: 'index/index.html'
         }),
         new HtmlWebpackPlugin({
             inject: false,
             template: './src/about/about.html',
-            filename: 'about.html'
+            filename: 'about/about.html'
         }),
         new HtmlWebpackPlugin({
             inject: false,
             template: './src/analytics/analytics.html',
-            filename: 'analytics.html'
+            filename: 'analytics/analytics.html'
         }),
         new WebpackMd5Hash()
     ]
