@@ -28,10 +28,10 @@ module.exports = {
             {
                 test: /\.css$/,
                 use: [
-                    (isDev ? 'style-loader' : MiniCssExtractPlugin.loader),
+                    isDev ? 'style-loader' : { loader: MiniCssExtractPlugin.loader, options: { publicPath: '../'} },
                     'css-loader',
-                    'postcss-loader'
-                ]
+                    'postcss-loader',
+                ],
             },
             {
                 test: /\.(eot|ttf|woff|woff2)$/,
