@@ -1,0 +1,1 @@
+// UPPER_SNAKE_CASE для констант в папке constants
