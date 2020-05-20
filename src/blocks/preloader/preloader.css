@@ -1,6 +1,6 @@
 @import url(__circle/preloader__circle.css);
 @import url(__text/preloader__text.css);
-
+@import url(_active/preloader_active.css);
 
 .preloader {
 	height: 282px;
@@ -10,7 +10,6 @@
 	align-items: center;
 	justify-content: center;
 	display: none;
-	/*display: flex;*/
 }
 
 @keyframes spin {
