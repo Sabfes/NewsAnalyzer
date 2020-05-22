@@ -5,33 +5,41 @@
 // кнопки сабмита.
 
 class SearchInput {
-    constructor(form, getNews, createCards) {
+    constructor(form, getNews, createCards, searchErr, result, preloader, ethernetErr) {
         this.form = form;
         this.getNews = getNews;
         this.createCards = createCards;
+        this.searchErr = searchErr;
+        this.result = result;
+        this.preloader = preloader;
+        this.ethernetErr = ethernetErr;
     }
     submit() {
         this.form.addEventListener('submit', (event)=> {
             event.preventDefault();
             if (this.validate(this.form)) {
-                document.querySelector('.search-err').classList.remove('search-err_active');
-                document.querySelector('.result').classList.remove('result_active');
-                document.querySelector('.preloader').classList.add('preloader_active');
+                this.ethernetErr.classList.remove('ethernet-err_active');
+                this.searchErr.classList.remove('search-err_active');
+                this.result.classList.remove('result_active');
+                this.preloader.classList.add('preloader_active');
                 let question = this.form.children[0].value;
                 this.getNews(question).then( res=> {
                     if (res.articles.length === 0) {
-                        document.querySelector('.preloader').classList.remove('preloader_active');
-                        document.querySelector('.search-err').classList.add('search-err_active');
+                        this.ethernetErr.classList.remove('ethernet-err_active');
+                        this.preloader.classList.remove('preloader_active');
+                        this.searchErr.classList.add('search-err_active');
                     } else {
                         window.localStorage.setItem("newsData", JSON.stringify(res));
-                        document.querySelector('.search-err').classList.remove('search-err_active');
+                        this.ethernetErr.classList.remove('ethernet-err_active');
+                        this.searchErr.classList.remove('search-err_active');
                         this.createCards();
-                        document.querySelector('.preloader').classList.remove('preloader_active');
-                        document.querySelector('.result').classList.add('result_active');
+                        this.preloader.classList.remove('preloader_active');
+                        this.result.classList.add('result_active');
                     }
-                }).catch( () => {
-                    document.querySelector('.search-err').classList.add('search-err_active');
-                    document.querySelector('.preloader').classList.remove('preloader_active');
+                }).catch( err => {
+                    console.log(err);
+                    this.preloader.classList.remove('preloader_active');
+                    this.ethernetErr.classList.add('ethernet-err_active');
                 })
             }
         })
@@ -39,7 +47,6 @@ class SearchInput {
             this.validate(this.form);
         })
     }
-
     // Валидация инпута
     validate(form) {
         const input = form.children[0];

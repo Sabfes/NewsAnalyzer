@@ -4,6 +4,8 @@
     padding: 20px 24px 24px;
     background: #fff;
     border-radius: 0 0 16px 16px;
+    box-sizing: border-box;
+    height: 304px;
 }
 @media screen and (max-width: 768px) {
     .card__content {

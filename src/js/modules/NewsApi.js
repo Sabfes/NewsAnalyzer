@@ -1,14 +1,15 @@
-import API_KEY from "../constants/constants";
-const from = '2020-04-10';
-const to = '2020-05-15';
+import {FROM, TO} from "../utils/Date";
 
+console.log(FROM,TO)
 
 class NewsApi {
+    constructor() {
+        this.API_KEY = '14b1535b3dc844bb82dfcdf4dea6202c'
+    }
     getNews(question) {
+        //СДЕЛАТЬ ФРОМ И ТУ
         //
-        // ПЕРЕДЕЛАТЬ ЮРЛ  и КОНСТАНТЫ , ЧТОБ ПЕРЕДАВАЛИСЬ ЧЕРЕЗ КОНСТРУКТОР и ФЕТЧ ШЕЛ ОТ КОНСТАНТЫ А НЕ ОТ АДРЕСА
-        //
-        return fetch(`http://newsapi.org/v2/everything?q=${question}&apiKey=${API_KEY}&from${from}&to${to}&pageSize=100`)
+        return fetch(`https://praktikum.tk/news/v2/everything?q=${question}&apiKey=${this.API_KEY}&from${FROM}&to${TO}&pageSize=100`)
             .then( res => {
                 if (res.ok) {
                     return res.json();

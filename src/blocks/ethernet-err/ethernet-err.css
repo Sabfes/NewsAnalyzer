@@ -1,0 +1,12 @@
+@import url(__text/ethernet-err__text.css);
+@import url(__title/ethernet-err__title.css);
+@import url(_active/ethernet-err__active.css);
+
+.ethernet-err {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #fff;
+}
