@@ -5,7 +5,6 @@ import NewsCardList from "./js/components/NewsCardList";
 import DataStorage from "./js/modules/DataStorage";
 import NewsCard from "./js/components/NewsCard";
 
-
 const newsApi = new NewsApi();
 const localStorage = new DataStorage();
 const card = new NewsCard();
@@ -24,6 +23,8 @@ const searchInput = new SearchInput(
     document.querySelector('.preloader'),
     document.querySelector('.ethernet-err')
 );
+
+
 searchInput.submit();
 document.querySelector('.result__button').addEventListener('click', ()=>{cardList.renderCards(3)});
 

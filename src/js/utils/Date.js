@@ -13,4 +13,7 @@ const dayWeekAgo = weekAgo.getDate();
 const FROM = `${yearWeekAgo}-${mountWeekAgo + 1}-${dayWeekAgo}`;
 const TO = `${year}-${month + 1}-${day}`;
 
-export {FROM , TO};
+const MONTHS = ['январь', 'февраль', 'март', 'апрель', 'май', 'июнь', 'июль', 'август', 'сентябрь', 'октябрь', 'ноябрь', 'декабрь'];
+const WEEKDAYS = [ 'ВС', 'ПН', 'ВТ', 'СР', 'ЧТ', 'ПТ', 'СБ'];
+
+export {FROM , TO, MONTHS, WEEKDAYS};

@@ -1,9 +1,3 @@
-// Конструктор класса принимает колбэк-функцию, исполняемую при сабмите формы поиска. В колбэк-функции
-// описывается взаимодействие с API, списком карточек и локальным браузерным хранилищем. Полученные от NewsAPI
-// данные должны приводить к обновлению хранилища, а список карточек отображать полученные данные на странице.
-// Кроме этого у класса SearchInput должны быть методы для валидации формы поиска и методы, управляющие работой
-// кнопки сабмита.
-
 class SearchInput {
     constructor(form, getNews, createCards, searchErr, result, preloader, ethernetErr) {
         this.form = form;
@@ -30,6 +24,7 @@ class SearchInput {
                         this.searchErr.classList.add('search-err_active');
                     } else {
                         window.localStorage.setItem("newsData", JSON.stringify(res));
+                        window.localStorage.setItem("question", question);
                         this.ethernetErr.classList.remove('ethernet-err_active');
                         this.searchErr.classList.remove('search-err_active');
                         this.createCards();
@@ -72,22 +67,3 @@ class SearchInput {
     }
 }
 export default SearchInput;
-
-
-
-
-// form.addEventListener('input', ()=> {
-//     searchInput.validate(form);
-// })
-//
-// form.addEventListener('submit', (event)=> {
-//     event.preventDefault();
-//     if (searchInput.validate(form)) {
-//         let question = form.children[0].value;
-//         newsApi.getNews(question).then( res=> {
-//             window.localStorage.setItem("newsData", JSON.stringify(res));
-//             cardList.createCards();
-//         })
-//
-//     }
-// })
