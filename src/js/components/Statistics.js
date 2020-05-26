@@ -1,6 +1,6 @@
 import {FROM, MONTHS, WEEKDAYS} from '../utils/Date';
 
-class Statistics {
+export default class Statistics {
     constructor(getData, question, title, weekNews, subtitle, month, days, graph, quantity) {
         this.dataArr = getData();
         this.questions = question();
@@ -59,4 +59,3 @@ class Statistics {
         }
     }
 }
-export default Statistics;

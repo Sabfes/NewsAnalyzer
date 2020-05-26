@@ -1,4 +1,4 @@
-class NewsCardList {
+export default class NewsCardList {
     constructor(container, getNews, createCard, resBtn) {
         this.container = container;
         this.getNews = getNews;
@@ -10,9 +10,9 @@ class NewsCardList {
     // Создание массива кард
     createCards() {
         //Удаление старых карточек
-        while (this.container.firstChild) {
-            this.container.removeChild(this.container.firstChild);
-        }
+        // while (this.container.firstChild) {
+        //     this.container.removeChild(this.container.firstChild);
+        // }
         //Создание массива карточек
         this.cardsArr = this.getNews().articles.map( card => {
             return this.createCard(card.source.name, card.title, card.publishedAt, card.description, card.urlToImage, card.url);
@@ -39,5 +39,3 @@ class NewsCardList {
         this.resBtn.classList.remove('result__button_active');
     }
 }
-
-export default NewsCardList;

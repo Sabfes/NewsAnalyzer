@@ -1,4 +1,4 @@
-class NewsCard {
+export default class NewsCard {
     //Создание карточки
     createCard(name, title, date, subtitle, img, link) {
         const card = document.createElement("a");
@@ -21,4 +21,3 @@ class NewsCard {
         return card;
     }
 }
-export default NewsCard;

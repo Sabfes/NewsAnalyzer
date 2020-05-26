@@ -1,4 +1,4 @@
-class DataStorage {
+export default class DataStorage {
     getData() {
         return JSON.parse(localStorage.getItem("newsData"));
     }
@@ -6,4 +6,3 @@ class DataStorage {
         return localStorage.getItem("question");
     }
 }
-export default DataStorage

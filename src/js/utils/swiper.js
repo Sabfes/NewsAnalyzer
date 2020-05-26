@@ -1,7 +1,7 @@
 import Swiper from 'swiper';
 import 'swiper/css/swiper.css';
 
-let swiper = new Swiper('.swiper-container', {
+const swiper = new Swiper('.swiper-container', {
     slidesPerView: 3,
     spaceBetween: 30,
     slidesPerGroup: 3,
