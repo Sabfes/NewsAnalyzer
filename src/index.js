@@ -5,7 +5,7 @@ import NewsCardList from "./js/components/NewsCardList";
 import DataStorage from "./js/modules/DataStorage";
 import NewsCard from "./js/components/NewsCard";
 
-const newsApi = new NewsApi();
+const newsApi = new NewsApi('14b1535b3dc844bb82dfcdf4dea6202c',);
 const localStorage = new DataStorage();
 const card = new NewsCard();
 const cardList = new NewsCardList(

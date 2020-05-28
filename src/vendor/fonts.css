@@ -3,6 +3,7 @@
     font-style:  normal;
     font-weight: 900;
     src: url("fonts/roboto-medium.woff") format("woff");
+    font-display: auto;
 }
 
 @font-face {
@@ -10,6 +11,7 @@
     font-style:  normal;
     font-weight: 400;
     src: url("fonts/roboto-regular.woff") format("woff");
+    font-display: auto;
 }
 
 @font-face {
@@ -17,4 +19,5 @@
     font-style:  normal;
     font-weight: 900;
     src: url("fonts/robotoslab-regular.woff") format("woff");
+    font-display: auto;
 }

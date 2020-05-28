@@ -2,7 +2,7 @@ export default class CommitCard {
     //Создание карточки
     createCard(name, email, date, message, avatar_url) {
         const card = document.createElement("div");
-        let dateCommit = date.substr(0, 10);
+        const dateCommit = date.substr(0, 10);
         card.classList.add('swiper-slide');
 
         card.insertAdjacentHTML('beforeend', `

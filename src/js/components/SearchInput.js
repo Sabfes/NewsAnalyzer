@@ -11,86 +11,86 @@ export default class SearchInput {
     submit() {
         this.form.addEventListener('submit', (event)=> {
             event.preventDefault();
-            if (this.validate(this.form)) {
-                this.ethernetErrToggle('off');
-                this.searchErrToggle('off');
-                this.resultToggle('off');
-                this.preloaderToggle('on');
+            if (this._validate(this.form)) {
+                this._showEthernetErr(false);
+                this._showSearchErr(false);
+                this._showResult(false);
+                this._showPreloader(true);
 
-                let question = this.form.children[0].value;
+                const question = this.form.children[0].value;
                 this.getNews(question).then( res=> {
                     if (res.articles.length === 0) {
-                        this.ethernetErrToggle('off');
-                        this.preloaderToggle('off');
-                        this.searchErrToggle('on');
+                        this._showEthernetErr(false);
+                        this._showPreloader(false);
+                        this._showSearchErr(true);
                     } else {
                         window.localStorage.setItem("newsData", JSON.stringify(res));
                         window.localStorage.setItem("question", question);
-                        this.ethernetErrToggle('off');
-                        this.searchErrToggle('off');
+                        this._showEthernetErr(false);
+                        this._showSearchErr(false);
                         this.createCards();
-                        this.preloaderToggle('off');
-                        this.resultToggle('on');
+                        this._showPreloader(false);
+                        this._showResult(true);
                     }
                 }).catch( err => {
                     console.log(err);
-                    this.preloaderToggle('off');
-                    this.ethernetErrToggle('on');
+                    this._showPreloader(false);
+                    this._showEthernetErr(true);
                 })
             }
         })
         this.form.addEventListener('input', ()=> {
-            this.validate(this.form);
+            this._validate(this.form);
         })
     }
     // Показ секции результата
-    resultToggle(action) {
-        if (action === 'on') {
+    _showResult(show) {
+        if (show) {
             this.result.classList.add('result_active');
-        } if (action === 'off') {
+        } else {
             this.result.classList.remove('result_active');
         }
     }
     // Показ ошибки поиска
-    searchErrToggle(action) {
-        if (action === 'on') {
+    _showSearchErr(show) {
+        if (show) {
             this.searchErr.classList.add('search-err_active');
-        } if (action === 'off') {
+        } else {
             this.searchErr.classList.remove('search-err_active');
         }
     }
     // Показ прелоудера
-    preloaderToggle(action) {
-        if (action === 'on') {
+    _showPreloader(show) {
+        if (show) {
             this.preloader.classList.add('preloader_active');
-        } if (action === 'off') {
+        } else {
             this.preloader.classList.remove('preloader_active');
         }
     }
     // Показ ошибки интернета
-    ethernetErrToggle(action) {
-        if (action === 'on') {
+    _showEthernetErr(show) {
+        if (show) {
             this.ethernetErr.classList.add('ethernet-err_active');
-        } if (action === 'off') {
+        } else {
             this.ethernetErr.classList.remove('ethernet-err_active');
         }
     }
     // Валидация инпута
-    validate(form) {
+    _validate(form) {
         const input = form.children[0];
         const button = form.children[1];
 
         if (input.value.length < 1) {
-            this.buttonBlock(button, 'block');
+            this._buttonBlock(button, 'block');
             input.placeholder = 'Нужно ввести ключевое слово';
             return false;
         } else {
-            this.buttonBlock(button, 'show');
+            this._buttonBlock(button, 'show');
             return true;
         }
     }
     // Блокировка кнопки
-    buttonBlock(button, action) {
+    _buttonBlock(button, action) {
         if (action === 'block') {
             button.style.backgroundColor = 'grey';
         }

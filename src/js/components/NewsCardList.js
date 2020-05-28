@@ -9,10 +9,6 @@ export default class NewsCardList {
     }
     // Создание массива кард
     createCards() {
-        //Удаление старых карточек
-        // while (this.container.firstChild) {
-        //     this.container.removeChild(this.container.firstChild);
-        // }
         //Создание массива карточек
         this.cardsArr = this.getNews().articles.map( card => {
             return this.createCard(card.source.name, card.title, card.publishedAt, card.description, card.urlToImage, card.url);
@@ -23,7 +19,7 @@ export default class NewsCardList {
     renderCards(step) {
         //Скрытие кнопки , если карточки закончились
         if (this.end >= this.cardsArr.length - step) {
-            this.hideBtn();
+            this._hideBtn();
         }
         this.end += step;
         this.start += step;
@@ -35,7 +31,7 @@ export default class NewsCardList {
         })
     }
     // Скрыть кнопку показать еще
-    hideBtn() {
+    _hideBtn() {
         this.resBtn.classList.remove('result__button_active');
     }
 }
