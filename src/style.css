@@ -13,6 +13,7 @@
 @import url(blocks/swiper/swiper.css);
 @import url(blocks/info/info.css);
 @import url(blocks/analytics/analytics.css);
+@import url(blocks/ethernet-err/ethernet-err.css);
 
 .root {
     background-color: #E5E5E5;

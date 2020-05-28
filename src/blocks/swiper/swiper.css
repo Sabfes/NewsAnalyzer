@@ -51,7 +51,8 @@
         display: none !important;
     }
     .swiper-wrapper {
-        transform: translate3d(40px, 0px, 0px) !important;
+        /*transform: translate3d(40px, 0px, 0px) !important;*/
+        padding-left: 40px;
     }
     .swiper-pagination {
         bottom: 4px !important;
@@ -59,7 +60,8 @@
 }
 @media screen and (max-width: 320px){
     .swiper-wrapper {
-        transform: translate3d(16px, 0px, 0px) !important;
+        /*transform: translate3d(16px, 0px, 0px) !important;*/
+        padding-left: 16px;
     }
     .swiper-pagination {
         bottom: -2px !important;

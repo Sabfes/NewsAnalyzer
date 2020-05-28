@@ -1,6 +1,6 @@
 .result__container {
     margin-top: 64px;
-    margin-bottom: 0;
+    margin-bottom: 64px;
     display: grid;
     grid-template-columns: auto auto auto;
     grid-gap: 16px;
@@ -10,6 +10,7 @@
         grid-template-columns: auto auto;
         grid-gap: 8px;
         margin-top: 32px;
+        margin-bottom: 22px;
     }
 }
 @media screen and (max-width: 680px) {
@@ -19,6 +20,7 @@
 }
 @media screen and (max-width: 500px) {
     .result__container {
+        margin-bottom: 12px;
         grid-template-columns: auto;
         grid-gap: 15px;
     }

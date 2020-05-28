@@ -1,19 +1,15 @@
 import '../style.css';
-import Swiper from 'swiper';
-import '../../node_modules/swiper/css/swiper.css';
+import swiper from "../js/utils/swiper";
 
-let swiper = new Swiper('.swiper-container', {
-    slidesPerView: 3,
-    spaceBetween: 30,
-    slidesPerGroup: 3,
-    loop: true,
-    loopFillGroupWithBlank: true,
-    pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-    },
-    navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-    },
-});
+import GithubApi from "../js/modules/GithubApi";
+import CommitCardList from "../js/components/CommitCardList";
+import CommitCard from "../js/components/CommitCard";
+
+const githubApi = new GithubApi();
+const commitCard = new CommitCard();
+const commitCardList = new CommitCardList(
+    document.querySelector('.swiper-wrapper'),
+    commitCard.createCard,
+    githubApi.getCommits,
+);
+
